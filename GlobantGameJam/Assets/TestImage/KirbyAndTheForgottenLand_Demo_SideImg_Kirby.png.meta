@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      KirbyAndTheForgottenLand_Demo_SideImg_Kirby_0: 2450728571420846983
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
