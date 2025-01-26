@@ -1808,6 +1808,10 @@ PrefabInstance:
       propertyPath: m_MaskInteraction
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4943210548837423434, guid: db15d8c816a0aa24d97fae1dfe29d4a2, type: 3}
+      propertyPath: m_Radius
+      value: 0.06975
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
