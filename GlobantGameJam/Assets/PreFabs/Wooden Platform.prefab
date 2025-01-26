@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1402319771376392899}
   - component: {fileID: 3766015925327823608}
   - component: {fileID: 4910895364233640085}
+  - component: {fileID: 9203616866055629248}
   m_Layer: 0
   m_Name: Wooden Platform
   m_TagString: Untagged
@@ -30,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 4220576303906313755}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.663, y: -0.317, z: 0}
-  m_LocalScale: {x: 4.7919, y: 4.7919, z: 4.7919}
+  m_LocalPosition: {x: 1.3394108, y: -0.0846899, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7449355215365327828, guid: 7d2fc350c954c7b4dbd485737045d836, type: 3}
+  m_Sprite: {fileID: 224998370531397423, guid: fb9703444a3c1cf459a9ae36a1689ce2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,17 +126,17 @@ BoxCollider2D:
   m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.002960682, y: 0.021464784}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.08, y: 0.02}
+    oldSize: {x: 0.48, y: 0.16}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.08, y: 0.02}
+  m_Size: {x: 0.4826498, y: 0.11326077}
   m_EdgeRadius: 0
 --- !u!50 &1402319771376392899
 Rigidbody2D:
@@ -195,5 +196,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c4b4130c6934242b183b3e421192dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 0.4
+  waitTime: 0.1
   respawnTime: 1.4
+--- !u!95 &9203616866055629248
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4220576303906313755}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e40e91920bb54bc408ddc13871a80cc4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
