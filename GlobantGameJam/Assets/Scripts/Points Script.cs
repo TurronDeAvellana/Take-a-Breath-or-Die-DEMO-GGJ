@@ -16,7 +16,8 @@ public class PointsScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Master.GetComponent<GameMaster>().AddPoint();
-        Debug.Log(collision);
+        GameObject player = collision.gameObject;
+        player.GetComponent<PlayerScript>().AddOxygen(100);
         Destroy(gameObject);
     }
 
