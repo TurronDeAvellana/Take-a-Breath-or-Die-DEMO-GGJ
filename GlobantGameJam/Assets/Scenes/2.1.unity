@@ -317,7 +317,10 @@ PrefabInstance:
     - {fileID: 8205317853017603905, guid: 81ffccf59b88ebe4ba77b2b3c09ac0bb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 75094311188168982, guid: 81ffccf59b88ebe4ba77b2b3c09ac0bb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1617865726}
   m_SourcePrefab: {fileID: 100100000, guid: 81ffccf59b88ebe4ba77b2b3c09ac0bb, type: 3}
 --- !u!1 &581345485
 GameObject:
@@ -2502,6 +2505,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 75094311188168982, guid: 81ffccf59b88ebe4ba77b2b3c09ac0bb, type: 3}
   m_PrefabInstance: {fileID: 531763803}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1617865726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617865725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993e4f1f32c1ad14ca9e978268bbe47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1631424484
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2847,7 +2862,7 @@ GameObject:
   - component: {fileID: 2008929222}
   m_Layer: 0
   m_Name: Tilemap (4)
-  m_TagString: Damage
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
