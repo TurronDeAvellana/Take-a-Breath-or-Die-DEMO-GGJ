@@ -42,7 +42,6 @@ public class PlayerScript : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Oxygen = 100f;
-        IsReducing = true;
     }
 
     void Update()
@@ -74,7 +73,7 @@ public class PlayerScript : MonoBehaviour
         // Oxygen
         if (IsReducing) 
         {
-            Oxygen -= Time.deltaTime * 10;
+            Oxygen -= Time.deltaTime * 35;
             if (Oxygen < 0)
             {
                 Oxygen = 0;
