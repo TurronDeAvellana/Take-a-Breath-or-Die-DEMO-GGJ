@@ -2,6 +2,7 @@ using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using System.Collections;
 using UnityEditor;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -73,7 +74,7 @@ public class PlayerScript : MonoBehaviour
         // Oxygen
         if (IsReducing)
         {
-            Oxygen -= Time.deltaTime * 10;
+            Oxygen -= Time.deltaTime * 35;
             if (Oxygen < 0)
             {
                 Oxygen = 0;
@@ -173,7 +174,7 @@ public class PlayerScript : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void AddOxygen(float Quantity)
