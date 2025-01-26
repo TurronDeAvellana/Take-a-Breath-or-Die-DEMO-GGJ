@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: f82b1aabe15a9d74aa86c26e2e1f7710
+guid: 2251470caa20d8246a7fa083a6f626c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6568381017807469242
-    second: enemy_walk_0
+      213: -768434080175899095
+    second: prota_idle_0
   - first:
-      213: -7724142208158362519
-    second: enemy_walk_1
+      213: 4476751021961574470
+    second: prota_idle_1
   - first:
-      213: 6291463294519083085
-    second: enemy_walk_2
+      213: 918133899213926176
+    second: prota_idle_2
   - first:
-      213: -5716283468139608365
-    second: enemy_walk_3
+      213: -416651600242694346
+    second: prota_idle_3
   - first:
-      213: 8394457189932444214
-    second: enemy_walk_4
+      213: -4737827260330464103
+    second: prota_idle_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,111 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_walk_0
+      name: prota_idle_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 3
         y: 0
-        width: 43
-        height: 64
+        width: 35
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 645ca2cd34c68d4a0800000000000000
-      internalID: -6568381017807469242
+      spriteID: 92ebfc18649f555f0800000000000000
+      internalID: -768434080175899095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_1
+      name: prota_idle_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 52
         y: 0
-        width: 39
-        height: 64
+        width: 34
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9649e1006955ec490800000000000000
-      internalID: -7724142208158362519
+      spriteID: 648f2ebe55d902e30800000000000000
+      internalID: 4476751021961574470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_2
+      name: prota_idle_2
       rect:
         serializedVersion: 2
-        x: 106
+        x: 103
         y: 0
-        width: 39
-        height: 64
+        width: 31
+        height: 51
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4008336884cf4750800000000000000
-      internalID: 6291463294519083085
+      spriteID: 02fe3e6baedddbc00800000000000000
+      internalID: 918133899213926176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_3
+      name: prota_idle_3
       rect:
         serializedVersion: 2
-        x: 150
+        x: 151
         y: 0
-        width: 41
-        height: 64
+        width: 31
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d6c91ec87eaba0b0800000000000000
-      internalID: -5716283468139608365
+      spriteID: 637af6cb391c73af0800000000000000
+      internalID: -416651600242694346
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_4
+      name: prota_idle_4
       rect:
         serializedVersion: 2
-        x: 194
+        x: 197
         y: 0
-        width: 44
-        height: 64
+        width: 33
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63aa528a65a1f7470800000000000000
-      internalID: 8394457189932444214
+      spriteID: 99c27d4753bdf3eb0800000000000000
+      internalID: -4737827260330464103
       vertices: []
       indices: 
       edges: []
@@ -225,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9bb7a5f46f2c1104780814988413c3b1
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy_walk_0: -6568381017807469242
-      enemy_walk_1: -7724142208158362519
-      enemy_walk_2: 6291463294519083085
-      enemy_walk_3: -5716283468139608365
-      enemy_walk_4: 8394457189932444214
+      prota_idle_0: -768434080175899095
+      prota_idle_1: 4476751021961574470
+      prota_idle_2: 918133899213926176
+      prota_idle_3: -416651600242694346
+      prota_idle_4: -4737827260330464103
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

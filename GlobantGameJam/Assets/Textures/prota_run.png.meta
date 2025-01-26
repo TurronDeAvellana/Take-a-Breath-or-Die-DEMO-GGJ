@@ -1,22 +1,28 @@
 fileFormatVersion: 2
-guid: f82b1aabe15a9d74aa86c26e2e1f7710
+guid: fc55dd14995c3f847ac92772aef9ab5f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6568381017807469242
-    second: enemy_walk_0
+      213: -4494440600327102574
+    second: prota_run_0
   - first:
-      213: -7724142208158362519
-    second: enemy_walk_1
+      213: 8042324258437659355
+    second: prota_run_1
   - first:
-      213: 6291463294519083085
-    second: enemy_walk_2
+      213: -4600144498100097324
+    second: prota_run_2
   - first:
-      213: -5716283468139608365
-    second: enemy_walk_3
+      213: 6209326130619265306
+    second: prota_run_3
   - first:
-      213: 8394457189932444214
-    second: enemy_walk_4
+      213: -2139560393508345146
+    second: prota_run_4
+  - first:
+      213: 8283489889530826082
+    second: prota_run_5
+  - first:
+      213: -891394146112015763
+    second: prota_run_6
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,13 +118,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_walk_0
+      name: prota_run_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 4
         y: 0
-        width: 43
-        height: 64
+        width: 34
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 645ca2cd34c68d4a0800000000000000
-      internalID: -6568381017807469242
+      spriteID: 29fd869261a80a1c0800000000000000
+      internalID: -4494440600327102574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_1
+      name: prota_run_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 53
         y: 0
-        width: 39
-        height: 64
+        width: 33
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +155,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9649e1006955ec490800000000000000
-      internalID: -7724142208158362519
+      spriteID: bdafea09d431c9f60800000000000000
+      internalID: 8042324258437659355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_2
+      name: prota_run_2
       rect:
         serializedVersion: 2
-        x: 106
+        x: 101
         y: 0
-        width: 39
-        height: 64
+        width: 32
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d4008336884cf4750800000000000000
-      internalID: 6291463294519083085
+      spriteID: 4dea64b93f00920c0800000000000000
+      internalID: -4600144498100097324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_3
+      name: prota_run_3
       rect:
         serializedVersion: 2
-        x: 150
+        x: 149
         y: 0
-        width: 41
-        height: 64
+        width: 31
+        height: 52
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d6c91ec87eaba0b0800000000000000
-      internalID: -5716283468139608365
+      spriteID: a11bc16a735fb2650800000000000000
+      internalID: 6209326130619265306
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_4
+      name: prota_run_4
       rect:
         serializedVersion: 2
-        x: 194
+        x: 198
         y: 0
-        width: 44
-        height: 64
+        width: 35
+        height: 53
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +221,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63aa528a65a1f7470800000000000000
-      internalID: 8394457189932444214
+      spriteID: 6caa0717821ce42e0800000000000000
+      internalID: -2139560393508345146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_run_5
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 31
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26d460eaa2ed4f270800000000000000
+      internalID: 8283489889530826082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: prota_run_6
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6271263fb121a3f0800000000000000
+      internalID: -891394146112015763
       vertices: []
       indices: 
       edges: []
@@ -225,7 +275,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9bb7a5f46f2c1104780814988413c3b1
+    spriteID: afea5b6d490e5e64bb8bb728c64fe045
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +285,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy_walk_0: -6568381017807469242
-      enemy_walk_1: -7724142208158362519
-      enemy_walk_2: 6291463294519083085
-      enemy_walk_3: -5716283468139608365
-      enemy_walk_4: 8394457189932444214
+      prota_run_0: -4494440600327102574
+      prota_run_1: 8042324258437659355
+      prota_run_2: -4600144498100097324
+      prota_run_3: 6209326130619265306
+      prota_run_4: -2139560393508345146
+      prota_run_5: 8283489889530826082
+      prota_run_6: -891394146112015763
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
