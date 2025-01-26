@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviour
     private bool isDashing;
     private float dashPower = 10f; // Increased dash power
     private float dashingTime = 0.1f; // Reduced dashing time
-    private float dashingCooldown = 1f;
+    private float dashingCooldown = 2f; // Increased cooldown to 2 seconds
 
     [SerializeField] private TrailRenderer tr;
 
@@ -35,14 +35,13 @@ public class PlayerScript : MonoBehaviour
     private float lastHorizontalDirection = 1f;
 
     // Dash limit attributes
-    private int availableDashes = 0; // Initial number of dashes
+    private int availableDashes = 1; // Initial number of dashes
 
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Oxygen = 100f;
-        IsReducing = true;
     }
 
     void Update()
@@ -72,7 +71,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         // Oxygen
-        if (IsReducing) 
+        if (IsReducing)
         {
             Oxygen -= Time.deltaTime * 10;
             if (Oxygen < 0)
@@ -81,8 +80,8 @@ public class PlayerScript : MonoBehaviour
                 Die();
             }
         }
-        
-        
+
+
     }
 
     private void Jump()
@@ -112,7 +111,7 @@ public class PlayerScript : MonoBehaviour
         // Controls the jump 
         if (CoyoteTimeCounter > 0 && JumpBufferCounter > 0)
         {
-            Rigidbody2D.linearVelocity = new Vector2(Rigidbody2D.linearVelocityX, JumpForce);
+            Rigidbody2D.linearVelocity = new Vector2(Rigidbody2D.linearVelocity.x, JumpForce);
             JumpBufferCounter = 0;
         }
     }
@@ -125,13 +124,13 @@ public class PlayerScript : MonoBehaviour
         Vector3 RightRay = transform.position;
         RightRay.x += GetComponent<SpriteRenderer>().bounds.size.x / 2 - 0.03f;
         // Draws them
-        Debug.DrawRay(transform.position, UnityEngine.Vector3.down * 0.2f, Color.red);
-        Debug.DrawRay(LeftRay, UnityEngine.Vector3.down * 0.2f, Color.red);
-        Debug.DrawRay(RightRay, UnityEngine.Vector3.down * 0.2f, Color.red);
+        Debug.DrawRay(transform.position, Vector3.down * 0.2f, Color.red);
+        Debug.DrawRay(LeftRay, Vector3.down * 0.2f, Color.red);
+        Debug.DrawRay(RightRay, Vector3.down * 0.2f, Color.red);
         //Defines if it's grounded
-        return (Physics2D.Raycast(transform.position, UnityEngine.Vector3.down, 0.2f) ||
-                Physics2D.Raycast(LeftRay, UnityEngine.Vector3.down, 0.2f) ||
-                Physics2D.Raycast(RightRay, UnityEngine.Vector3.down, 0.2f));
+        return (Physics2D.Raycast(transform.position, Vector3.down, 0.2f) ||
+                Physics2D.Raycast(LeftRay, Vector3.down, 0.2f) ||
+                Physics2D.Raycast(RightRay, Vector3.down, 0.2f));
     }
 
     private void FixedUpdate()
@@ -161,6 +160,7 @@ public class PlayerScript : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+        availableDashes = 1; // Reset the number of available dashes
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -173,11 +173,11 @@ public class PlayerScript : MonoBehaviour
 
     private void Die()
     {
-        Instantiate(Prefab, new Vector3(0,0,0), Quaternion.identity);
+        Instantiate(Prefab, new Vector3(0, 0, 0), Quaternion.identity);
         Destroy(gameObject);
     }
 
-    public void AddOxygen(float Quantity) 
+    public void AddOxygen(float Quantity)
     {
         Oxygen += Quantity;
         if (Oxygen > 100)
@@ -186,7 +186,7 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
-    public void ToggleOxygen(bool boolean) 
+    public void ToggleOxygen(bool boolean)
     {
         IsReducing = boolean;
     }
@@ -194,6 +194,6 @@ public class PlayerScript : MonoBehaviour
     // Add a dash
     private void AddDash()
     {
-        availableDashes++;
+        availableDashes = 1; // Ensure only one dash is available at a time
     }
 }
