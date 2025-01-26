@@ -12,7 +12,6 @@ public class PlayerScript : MonoBehaviour
     private SpriteRenderer SpriteRenderer;
     private Animator animator;
 
-    private bool IsDead;
     public float Oxygen;
     public bool IsReducing;
 
@@ -27,10 +26,8 @@ public class PlayerScript : MonoBehaviour
     private bool canDash = true;
     private bool isDashing;
     private float dashPower = 10f; // Increased dash power
-    private float dashingTime  = 0.1f; // Reduced dashing time
+    private float dashingTime = 0.1f; // Reduced dashing time
     private float dashingCooldown = 2f; // Increased cooldown to 2 seconds
-
-    public AudioClip audio;
 
     [SerializeField] private TrailRenderer tr;
 
@@ -42,7 +39,6 @@ public class PlayerScript : MonoBehaviour
 
     void Start()
     {
-        IsDead = false;
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Oxygen = 100f;
@@ -51,56 +47,55 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-        if (!IsDead) 
+        // Horizontal movement
+        Horizontal = Input.GetAxisRaw("Horizontal");
+
+        if (Horizontal != 0)
         {
-            // Horizontal movement
-            Horizontal = Input.GetAxisRaw("Horizontal");
-        
-            if (Horizontal != 0)
-            {
-                lastHorizontalDirection = Horizontal;
-                animator.SetBool("IsRunning", true);
-            }
-            else 
-            {
-                animator.SetBool("IsRunning", false);
-            }
+            lastHorizontalDirection = Horizontal;
+            animator.SetBool("IsRunning", true);
+        }
+        else 
+        {
+            animator.SetBool("IsRunning", false);
+        }
 
-            SpriteRenderer.flipX = lastHorizontalDirection < 0.0f;
+        SpriteRenderer.flipX = lastHorizontalDirection < 0.0f;
 
-            // Jump
-            Jump();
-            if (!IsGrounded())
-            {
-                animator.SetBool("OnAir", true);
-            }
-            else 
-            {
-                animator.SetBool("OnAir", false);
-            }
+        // Jump
+        Jump();
+        if (!IsGrounded())
+        {
+            animator.SetBool("OnAir", true);
+        }
+        else 
+        {
+            animator.SetBool("OnAir", false);
+        }
 
-            // Dash
-            if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && availableDashes > 0)
-            {
-                StartCoroutine(Dash());
-            }
+        // Dash
+        if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && availableDashes > 0)
+        {
+            StartCoroutine(Dash());
+        }
 
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                AddDash();
-            }
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            AddDash();
+        }
 
-            // Oxygen
-            if (IsReducing)
+        // Oxygen
+        if (IsReducing)
+        {
+            Oxygen -= Time.deltaTime * 35;
+            if (Oxygen < 0)
             {
-                Oxygen -= Time.deltaTime * 35;
-                if (Oxygen < 0)
-                {
-                    Oxygen = 0;
-                    Die();
-                }
+                Oxygen = 0;
+                Die();
             }
         }
+
+
     }
 
     private void Jump()
@@ -188,17 +183,19 @@ public class PlayerScript : MonoBehaviour
         {
             Die();
         }
+        if (collision.gameObject.CompareTag("X")) 
+        {
+            Instantiate(Prefab, new Vector3(0, 0, 0), Quaternion.identity);
+        }
     }
 
     private void Die()
     {
-        IsDead = true;
-        GetComponent<CapsuleCollider2D>().enabled = false;
-        Camera.main.GetComponent<AudioSource>().PlayOneShot(audio);
-        Invoke("Reset", 1);
+        SceneManager.LoadScene("MainMenu");
     }
 
-    private void Reset()
+
+    private void Die2()
     {
         SceneManager.LoadScene("MainMenu");
     }

@@ -2878,7 +2878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PrefabPoints: {fileID: 882944072}
-  ActualPoints: 3
+  ActualPoints: 4
   bubble: {fileID: 1617865725}
 --- !u!82 &1779244368
 AudioSource:
