@@ -13,6 +13,7 @@ public class PlayerScript : MonoBehaviour
     private SpriteRenderer SpriteRenderer;
 
     public float Oxygen;
+    public bool IsReducing;
 
     // Game feel attributes
     private float CoyoteTime = 0.2f;
@@ -41,6 +42,7 @@ public class PlayerScript : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Oxygen = 100f;
+        IsReducing = true;
     }
 
     void Update()
@@ -70,12 +72,17 @@ public class PlayerScript : MonoBehaviour
         }
 
         // Oxygen
-        Oxygen -= Time.deltaTime * 10;
-        if (Oxygen < 0)
+        if (IsReducing) 
         {
-            Oxygen = 0;
-            Die();
+            Oxygen -= Time.deltaTime * 10;
+            if (Oxygen < 0)
+            {
+                Oxygen = 0;
+                Die();
+            }
         }
+        
+        
     }
 
     private void Jump()
@@ -177,6 +184,11 @@ public class PlayerScript : MonoBehaviour
         {
             Oxygen = 100;
         }
+    }
+
+    public void ToggleOxygen(bool boolean) 
+    {
+        IsReducing = boolean;
     }
 
     // Add a dash

@@ -1,20 +1,39 @@
 using UnityEngine;
 using System.Linq;
+using UnityEditor.ShaderGraph.Internal;
+using UnityEngine.UIElements;
 
 
 public class GameMaster : MonoBehaviour
 {
     public GameObject PrefabPoints;
-    private int Points;
+    private int[] Points = { 2 };
+    private int ActualPoints;
+    private int Level;
+    private Vector3[] LevelOne =  
+            { 
+                new Vector3(-0.67f,-0.21f,0),
+                new Vector3(0.04f,0.13f,0),
+                new Vector3(-0.68f,0.5f,0),
+                new Vector3(0.36f,0.64f,0),
+                new Vector3(0.99f,0.35f,0)
+            };
 
     void Start()
     {
-        Points = 0;
+        Level = 1;
+        ActualPoints = 0;
     }
 
     void Update()
     {
-        
+        Debug.Log(ActualPoints);
+        if (ActualPoints == 0)
+        {
+            Vector3[] XD = SelectPoints(2, LevelOne);
+            Debug.Log(XD);
+            ActualPoints += Points[Level - 1];
+        }
     }
 
     private Vector3[] SelectPoints(int NumberOfPoints,
@@ -44,6 +63,6 @@ public class GameMaster : MonoBehaviour
     }
     public void AddPoint() 
     {
-        Points--;
+        ActualPoints--;
     }
 }

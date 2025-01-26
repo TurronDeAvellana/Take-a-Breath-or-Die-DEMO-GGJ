@@ -15,10 +15,13 @@ public class PointsScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Master.GetComponent<GameMaster>().AddPoint();
-        GameObject player = collision.gameObject;
-        player.GetComponent<PlayerScript>().AddOxygen(100);
-        Destroy(gameObject);
+        if (collision.gameObject.tag == "Player")
+        {
+            Master.GetComponent<GameMaster>().AddPoint();
+            GameObject player = collision.gameObject;
+            player.GetComponent<PlayerScript>().AddOxygen(100);
+            /*Destroy(gameObject);*/
+        }
     }
 
     public void SetMaster (GameObject NewMaster)

@@ -1804,6 +1804,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4637886575259760661, guid: db15d8c816a0aa24d97fae1dfe29d4a2, type: 3}
+      propertyPath: IsReducing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4758653965171231134, guid: db15d8c816a0aa24d97fae1dfe29d4a2, type: 3}
       propertyPath: m_MaskInteraction
       value: 0

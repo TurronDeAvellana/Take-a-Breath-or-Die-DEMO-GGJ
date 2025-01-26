@@ -49,15 +49,26 @@ public class Blubbleanimation : MonoBehaviour
 
     void Explode()
     {
+        otherObject.GetComponent<PlayerScript>().ToggleOxygen(true);
         Debug.Log("¡La burbuja explotó!");
         Destroy(gameObject); 
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player") 
+        {
+            GameObject player = collision.gameObject;
+            player.GetComponent<PlayerScript>().ToggleOxygen(false);
+        }
+        
+    }
 
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
+            otherObject.GetComponent<PlayerScript>().ToggleOxygen(true);
             Explode();
         }
     }
