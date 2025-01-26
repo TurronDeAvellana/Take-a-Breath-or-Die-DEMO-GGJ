@@ -6,9 +6,12 @@ public class Blubbleanimation : MonoBehaviour
     public float explosionRadius = 5.0f; 
     public LayerMask PlayerLayer;
     public string playerLayerName = "Player";
+    public GameObject otherObject;  
     private Vector3 initialScale;
     private float timer;
     private bool isShrinking = false;
+   
+
 
     void Start()
     {
@@ -36,6 +39,12 @@ public class Blubbleanimation : MonoBehaviour
             Explode();
         }
 
+        if (GetComponent<SpriteRenderer>().bounds.size.x <= otherObject.GetComponent<SpriteRenderer>().bounds.size.x)
+        {
+            Explode();
+        }
+
+        
     }
 
     void Explode()
@@ -47,11 +56,8 @@ public class Blubbleanimation : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Un objeto salió del área: " + other.name);
-
         if (other.CompareTag("Player"))
         {
-            Debug.Log("El jugador salió del área. ¡Explotando!");
             Explode();
         }
     }
