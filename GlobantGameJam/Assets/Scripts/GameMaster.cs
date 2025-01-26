@@ -27,13 +27,6 @@ public class GameMaster : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(ActualPoints);
-        if (ActualPoints == 0)
-        {
-            Vector3[] XD = SelectPoints(2, LevelOne);
-            Debug.Log(XD);
-            ActualPoints += Points[Level - 1];
-        }
     }
 
     private Vector3[] SelectPoints(int NumberOfPoints,
