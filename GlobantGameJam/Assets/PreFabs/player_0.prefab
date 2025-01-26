@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 4
-  JumpForce: 200
+  JumpForce: 5
   tr: {fileID: 4758653965171231134}
 --- !u!96 &4758653965171231134
 TrailRenderer:
