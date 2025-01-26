@@ -8,10 +8,12 @@ public class WoodenPlatform : MonoBehaviour
     [SerializeField] private float waitTime;
     [SerializeField] private float respawnTime;
     private Vector3 initialPosition;
+    Animator animator;
   
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         initialPosition = transform.position;
     }
 
@@ -40,12 +42,19 @@ public class WoodenPlatform : MonoBehaviour
     private void DestroyPlatform()
     {
 
-        gameObject.SetActive(false);
+        animator.SetBool("IsBroken", true);
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         Invoke("RespawnPlatform", respawnTime);
     }
 
     private void RespawnPlatform()
     {
-        gameObject.SetActive(true);
+        animator.SetBool("IsBroken", false);
     }
+
+    public void EnableCollider()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+    }
+
 }
