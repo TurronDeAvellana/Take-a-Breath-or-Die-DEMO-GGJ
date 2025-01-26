@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PointsScript : MonoBehaviour
 {
-    public GameObject Bubble;
+    public GameObject Master;
     void Start()
     {
         
@@ -15,15 +15,13 @@ public class PointsScript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        /*
-        Bubble.GetComponent<BubbleScript>().AddPoint();
-        */
+        Master.GetComponent<GameMaster>().AddPoint();
         Debug.Log(collision);
         Destroy(gameObject);
     }
 
-    public void SetBubble (GameObject NewBubble)
+    public void SetMaster (GameObject NewMaster)
     {
-        Bubble = NewBubble;
+        Master = NewMaster;
     }
 }

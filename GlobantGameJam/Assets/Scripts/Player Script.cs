@@ -1,11 +1,13 @@
 using UnityEngine;
 using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using System.Collections;
+using UnityEditor;
 
 public class PlayerScript : MonoBehaviour
 {
     public float Speed;
     public float JumpForce;
+    public GameObject Prefab;
     private float Horizontal;
     private Rigidbody2D Rigidbody2D;
     private SpriteRenderer SpriteRenderer;
@@ -141,6 +143,20 @@ public class PlayerScript : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Damage"))
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Instantiate(Prefab, new Vector3(0,0,0), Quaternion.identity);
+        Destroy(gameObject);
     }
 
     // Add a dash
