@@ -8,10 +8,12 @@ public class GameMaster : MonoBehaviour
 {
     public GameObject PrefabPoints;
     private int[] Points = { 2 };
-    private int ActualPoints;
+    public int ActualPoints;
     private int Level;
-    private Vector3[] LevelOne =  
-            { 
+
+    public GameObject bubble;
+    private Vector3[] LevelOne =
+            {
                 new Vector3(-0.67f,-0.21f,0),
                 new Vector3(0.04f,0.13f,0),
                 new Vector3(-0.68f,0.5f,0),
@@ -22,20 +24,24 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
         Level = 1;
-        ActualPoints = 0;
+
     }
 
     void Update()
     {
-        
+        if (ActualPoints == 0)
+        {
+            bubble.SetActive(true);
+        }
+
     }
 
     private Vector3[] SelectPoints(int NumberOfPoints,
-                                   Vector3[] ListOfPoints) 
+                                   Vector3[] ListOfPoints)
     {
         Vector3[] SelectedPoints = { };
 
-        while (SelectedPoints.Length < NumberOfPoints) 
+        while (SelectedPoints.Length < NumberOfPoints)
         {
             int selector = Random.Range(0, SelectedPoints.Length);
             if (!SelectedPoints.Contains(ListOfPoints[selector]))
@@ -55,7 +61,7 @@ public class GameMaster : MonoBehaviour
             instance.GetComponent<PointsScript>().SetMaster(gameObject);
         }
     }
-    public void AddPoint() 
+    public void AddPoint()
     {
         ActualPoints--;
     }
