@@ -11,7 +11,7 @@ public class StarButton : MonoBehaviour
         {
             // Load the game scene
             Debug.Log("Player touched the star! Starting game...");
-            SceneManager.LoadScene("SampleScene"); // Replace "GameScene" with your game scene name
+            SceneManager.LoadScene("1.1"); // Replace "GameScene" with your game scene name
         }
     }
 }

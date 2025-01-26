@@ -131,8 +131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 4
-  JumpForce: 5
+  JumpForce: 3.7
   Prefab: {fileID: 7459116739315118837, guid: 591247c2088d2dd499a7295e427ff0bc, type: 3}
+  Oxygen: 0
+  IsReducing: 0
   tr: {fileID: 4758653965171231134}
 --- !u!96 &4758653965171231134
 TrailRenderer:

@@ -20,7 +20,7 @@ public class PointsScript : MonoBehaviour
             Master.GetComponent<GameMaster>().AddPoint();
             GameObject player = collision.gameObject;
             player.GetComponent<PlayerScript>().AddOxygen(100);
-            /*Destroy(gameObject);*/
+            Destroy(gameObject);
         }
     }
 
