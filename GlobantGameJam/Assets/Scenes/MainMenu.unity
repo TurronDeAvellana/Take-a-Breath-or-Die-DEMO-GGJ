@@ -2060,26 +2060,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4492449505593691901, guid: db15d8c816a0aa24d97fae1dfe29d4a2, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4492449505593691901, guid: db15d8c816a0aa24d97fae1dfe29d4a2, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4637886575259760661, guid: db15d8c816a0aa24d97fae1dfe29d4a2, type: 3}
-      propertyPath: IsReducing
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758653965171231134, guid: db15d8c816a0aa24d97fae1dfe29d4a2, type: 3}
-      propertyPath: m_MaskInteraction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4943210548837423434, guid: db15d8c816a0aa24d97fae1dfe29d4a2, type: 3}
-      propertyPath: m_Radius
-      value: 0.06975
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

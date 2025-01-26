@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour
     private float Horizontal;
     private Rigidbody2D Rigidbody2D;
     private SpriteRenderer SpriteRenderer;
+    private Animator animator;
 
     public float Oxygen;
     public bool IsReducing;
@@ -43,6 +44,7 @@ public class PlayerScript : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         Oxygen = 100f;
+        animator  = GetComponent<Animator>();
     }
 
     void Update()
@@ -53,12 +55,25 @@ public class PlayerScript : MonoBehaviour
         if (Horizontal != 0)
         {
             lastHorizontalDirection = Horizontal;
+            animator.SetBool("IsRunning", true);
+        }
+        else 
+        {
+            animator.SetBool("IsRunning", false);
         }
 
         SpriteRenderer.flipX = lastHorizontalDirection < 0.0f;
 
         // Jump
         Jump();
+        if (!IsGrounded())
+        {
+            animator.SetBool("OnAir", true);
+        }
+        else 
+        {
+            animator.SetBool("OnAir", false);
+        }
 
         // Dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && availableDashes > 0)

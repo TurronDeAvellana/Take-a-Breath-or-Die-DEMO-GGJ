@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: f82b1aabe15a9d74aa86c26e2e1f7710
+guid: 469aea0986c2b8b45bf1fa344a3e99bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6568381017807469242
-    second: enemy_walk_0
-  - first:
-      213: -7724142208158362519
-    second: enemy_walk_1
-  - first:
-      213: 6291463294519083085
-    second: enemy_walk_2
-  - first:
-      213: -5716283468139608365
-    second: enemy_walk_3
-  - first:
-      213: 8394457189932444214
-    second: enemy_walk_4
+      213: -9136834448258697486
+    second: bubble_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 150
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,115 +96,106 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: enemy_walk_0
+      name: bubble_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 43
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 645ca2cd34c68d4a0800000000000000
-      internalID: -6568381017807469242
+      spriteID: 2f6fcf37a71733180800000000000000
+      internalID: -9136834448258697486
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_1
+      name: bubble_1
       rect:
         serializedVersion: 2
-        x: 55
+        x: 16
         y: 0
-        width: 39
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 9649e1006955ec490800000000000000
-      internalID: -7724142208158362519
+      spriteID: fe97295b939bf9f4eb2fd8da6a2446cd
+      internalID: -525916198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_2
+      name: bubble_2
       rect:
         serializedVersion: 2
-        x: 106
+        x: 32
         y: 0
-        width: 39
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: d4008336884cf4750800000000000000
-      internalID: 6291463294519083085
+      spriteID: dca6f29a3a9d6b041bb2776b3bcea1c6
+      internalID: 500010468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: enemy_walk_3
+      name: bubble_3
       rect:
         serializedVersion: 2
-        x: 150
+        x: 48
         y: 0
-        width: 41
-        height: 64
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3d6c91ec87eaba0b0800000000000000
-      internalID: -5716283468139608365
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: enemy_walk_4
-      rect:
-        serializedVersion: 2
-        x: 194
-        y: 0
-        width: 44
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 63aa528a65a1f7470800000000000000
-      internalID: 8394457189932444214
+      spriteID: da95e1df6a0ab7c488c3b598fcb4eb8d
+      internalID: -1071435168
       vertices: []
       indices: 
       edges: []
@@ -225,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9bb7a5f46f2c1104780814988413c3b1
+    spriteID: 6ee468b5767c95046a3c59b514c4adf1
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +214,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      enemy_walk_0: -6568381017807469242
-      enemy_walk_1: -7724142208158362519
-      enemy_walk_2: 6291463294519083085
-      enemy_walk_3: -5716283468139608365
-      enemy_walk_4: 8394457189932444214
+      bubble_0: -9136834448258697486
+      bubble_1: -525916198
+      bubble_2: 500010468
+      bubble_3: -1071435168
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
