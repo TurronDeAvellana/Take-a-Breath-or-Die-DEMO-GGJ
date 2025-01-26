@@ -12,6 +12,8 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D Rigidbody2D;
     private SpriteRenderer SpriteRenderer;
 
+    public float Oxygen;
+
     // Game feel attributes
     private float CoyoteTime = 0.2f;
     private float CoyoteTimeCounter;
@@ -38,6 +40,7 @@ public class PlayerScript : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        Oxygen = 100f;
     }
 
     void Update()
@@ -64,6 +67,14 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.L))
         {
             AddDash();
+        }
+
+        // Oxygen
+        Oxygen -= Time.deltaTime * 10;
+        if (Oxygen < 0)
+        {
+            Oxygen = 0;
+            Die();
         }
     }
 
@@ -157,6 +168,15 @@ public class PlayerScript : MonoBehaviour
     {
         Instantiate(Prefab, new Vector3(0,0,0), Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    public void AddOxygen(float Quantity) 
+    {
+        Oxygen += Quantity;
+        if (Oxygen > 100)
+        {
+            Oxygen = 100;
+        }
     }
 
     // Add a dash
