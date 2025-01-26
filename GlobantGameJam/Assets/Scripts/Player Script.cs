@@ -10,6 +10,13 @@ public class PlayerScript : MonoBehaviour
     private Rigidbody2D Rigidbody2D;
     private SpriteRenderer SpriteRenderer;
 
+    // Game feel attributes
+    private float CoyoteTime = 0.2f;
+    private float CoyoteTimeCounter;
+
+    private float JumpBufferTime = 0.2f;
+    private float JumpBufferCounter;
+
     // Dash start attributes 
     private bool canDash = true;
     private bool isDashing;
@@ -44,14 +51,9 @@ public class PlayerScript : MonoBehaviour
         SpriteRenderer.flipX = lastHorizontalDirection < 0.0f;
 
         // Jump
-        Debug.DrawRay(transform.position, UnityEngine.Vector3.down * 0.2f, Color.red);
-        bool Grounded = Physics2D.Raycast(transform.position, UnityEngine.Vector3.down, 0.2f);
+        Jump();
 
-        if ((Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.Space))) && Grounded)
-        {
-            Jump();
-        }
-
+        // Dash
         if (Input.GetKeyDown(KeyCode.LeftShift) && canDash && availableDashes > 0)
         {
             StartCoroutine(Dash());
@@ -65,7 +67,51 @@ public class PlayerScript : MonoBehaviour
 
     private void Jump()
     {
-        Rigidbody2D.AddForce(transform.up * JumpForce);
+        // Gets the key inputs
+        bool IsPressing = Input.GetKeyDown(KeyCode.W) ||
+                          Input.GetKeyDown(KeyCode.Space) ||
+                          Input.GetKeyDown(KeyCode.UpArrow);
+        // Controls the Coyote time
+        if (IsGrounded())
+        {
+            CoyoteTimeCounter = CoyoteTime;
+        }
+        else
+        {
+            CoyoteTimeCounter -= Time.deltaTime;
+        }
+        // Controls the Jump buffer
+        if (IsPressing)
+        {
+            JumpBufferCounter = JumpBufferTime;
+        }
+        else
+        {
+            JumpBufferCounter -= Time.deltaTime;
+        }
+        // Controls the jump 
+        if (CoyoteTimeCounter > 0 && JumpBufferCounter > 0)
+        {
+            Rigidbody2D.linearVelocity = new Vector2(Rigidbody2D.linearVelocityX, JumpForce);
+            JumpBufferCounter = 0;
+        }
+    }
+
+    private bool IsGrounded()
+    {
+        // Define the Rays
+        Vector3 LeftRay = transform.position;
+        LeftRay.x -= GetComponent<SpriteRenderer>().bounds.size.x / 2 - 0.03f;
+        Vector3 RightRay = transform.position;
+        RightRay.x += GetComponent<SpriteRenderer>().bounds.size.x / 2 - 0.03f;
+        // Draws them
+        Debug.DrawRay(transform.position, UnityEngine.Vector3.down * 0.2f, Color.red);
+        Debug.DrawRay(LeftRay, UnityEngine.Vector3.down * 0.2f, Color.red);
+        Debug.DrawRay(RightRay, UnityEngine.Vector3.down * 0.2f, Color.red);
+        //Defines if it's grounded
+        return (Physics2D.Raycast(transform.position, UnityEngine.Vector3.down, 0.2f) ||
+                Physics2D.Raycast(LeftRay, UnityEngine.Vector3.down, 0.2f) ||
+                Physics2D.Raycast(RightRay, UnityEngine.Vector3.down, 0.2f));
     }
 
     private void FixedUpdate()
