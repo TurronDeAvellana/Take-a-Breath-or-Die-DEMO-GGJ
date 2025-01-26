@@ -1,7 +1,5 @@
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 using System.Collections;
-using UnityEditor;
 using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
