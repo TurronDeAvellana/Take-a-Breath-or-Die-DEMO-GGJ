@@ -136,6 +136,7 @@ MonoBehaviour:
   Prefab: {fileID: 7459116739315118837, guid: 591247c2088d2dd499a7295e427ff0bc, type: 3}
   Oxygen: 0
   IsReducing: 0
+  audio: {fileID: 8300000, guid: 54c322820f9850844b11d548c4530edd, type: 3}
   tr: {fileID: 4758653965171231134}
 --- !u!96 &4758653965171231134
 TrailRenderer:

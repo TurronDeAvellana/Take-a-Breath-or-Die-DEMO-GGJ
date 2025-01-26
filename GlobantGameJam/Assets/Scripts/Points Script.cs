@@ -4,6 +4,7 @@ using UnityEngine;
 public class PointsScript : MonoBehaviour
 {
     public GameObject Master;
+    public AudioClip audio;
     void Start()
     {
         
@@ -20,6 +21,7 @@ public class PointsScript : MonoBehaviour
             Master.GetComponent<GameMaster>().AddPoint();
             GameObject player = collision.gameObject;
             player.GetComponent<PlayerScript>().AddOxygen(100);
+            Camera.main.GetComponent<AudioSource>().PlayOneShot(audio);
             Destroy(gameObject);
         }
     }
