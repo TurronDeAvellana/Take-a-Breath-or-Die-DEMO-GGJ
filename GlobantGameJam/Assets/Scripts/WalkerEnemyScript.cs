@@ -52,7 +52,7 @@ public class WalkerEnemyScript : MonoBehaviour
         {
             speed = 1;
             Vector2 scale = transform.localScale;
-            scale.x = 1;
+            scale.x = Mathf.Abs(scale.x);
             transform.localScale = scale;
         }
 
@@ -60,7 +60,7 @@ public class WalkerEnemyScript : MonoBehaviour
         {
             speed = -1;
             Vector2 scale = transform.localScale;
-            scale.x = -1;
+            scale.x = Mathf.Abs(scale.x) * -1;
             transform.localScale = scale;
         }
     }
