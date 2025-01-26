@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement; // To manage scene loading
 
-public class StartButton : MonoBehaviour
+public class EasterEgg : MonoBehaviour
+
+
 {
+    public GameObject easterEgg;
     // Method called when something enters the trigger collider
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,7 +14,13 @@ public class StartButton : MonoBehaviour
         {
             // Load the game scene
             Debug.Log("Player touched the star! Starting game...");
-            SceneManager.LoadScene("1.1"); // Replace "GameScene" with your game scene name
+
+            // Replace "GameScene" with your game scene name
+            easterEgg.SetActive(true);
+
         }
+
     }
+
 }
+
