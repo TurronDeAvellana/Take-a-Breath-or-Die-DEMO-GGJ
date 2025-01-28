@@ -183,19 +183,9 @@ public class PlayerScript : MonoBehaviour
         {
             Die();
         }
-        if (collision.gameObject.CompareTag("X")) 
-        {
-            Instantiate(Prefab, new Vector3(0, 0, 0), Quaternion.identity);
-        }
     }
 
     private void Die()
-    {
-        SceneManager.LoadScene("MainMenu");
-    }
-
-
-    private void Die2()
     {
         SceneManager.LoadScene("MainMenu");
     }

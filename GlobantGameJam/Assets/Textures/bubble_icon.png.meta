@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 2251470caa20d8246a7fa083a6f626c0
+guid: 8bfb91b9e1897a94884b347b14a31cfe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -768434080175899095
-    second: prota_idle_0
-  - first:
-      213: 4476751021961574470
-    second: prota_idle_1
-  - first:
-      213: 918133899213926176
-    second: prota_idle_2
-  - first:
-      213: -416651600242694346
-    second: prota_idle_3
-  - first:
-      213: -4737827260330464103
-    second: prota_idle_4
+      213: 4716380115746110571
+    second: bubble_icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -63,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -125,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: prota_idle_0
+      name: bubble_icon_0
       rect:
         serializedVersion: 2
-        x: 3
+        x: 0
         y: 0
-        width: 35
-        height: 52
+        width: 160
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,96 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92ebfc18649f555f0800000000000000
-      internalID: -768434080175899095
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: prota_idle_1
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 0
-        width: 34
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 648f2ebe55d902e30800000000000000
-      internalID: 4476751021961574470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: prota_idle_2
-      rect:
-        serializedVersion: 2
-        x: 103
-        y: 0
-        width: 31
-        height: 51
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 02fe3e6baedddbc00800000000000000
-      internalID: 918133899213926176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: prota_idle_3
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 0
-        width: 31
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 637af6cb391c73af0800000000000000
-      internalID: -416651600242694346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: prota_idle_4
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 0
-        width: 33
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99c27d4753bdf3eb0800000000000000
-      internalID: -4737827260330464103
+      spriteID: b6c33c01ab2f37140800000000000000
+      internalID: 4716380115746110571
       vertices: []
       indices: 
       edges: []
@@ -247,12 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      prota_idle_0: -768434080175899095
-      prota_idle_1: 4476751021961574470
-      prota_idle_2: 918133899213926176
-      prota_idle_3: -416651600242694346
-      prota_idle_4: -4737827260330464103
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
